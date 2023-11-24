@@ -16,8 +16,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style/app.css">
-  <script type="module" src="app.js"></script>
+  <link rel="stylesheet" href="/style/app.css">
+  <script type="module" src="/src/app.js"></script>
 </head>
 
 <body>
@@ -28,11 +28,45 @@
     <div class="top-bar-title">
       <h1>Usuarios</h1>
     </div>
-    <div class="top-bar-hamburguer">
-      <button>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <title>menu</title>
-          <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+    <div class="container">
+      <button class="container-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <g stroke-width="6.5" stroke-linecap="round">
+            <path
+              d="M72 82.286h28.75"
+              fill="#009100"
+              fill-rule="evenodd"
+              stroke="#fff"
+            />
+            <path
+              d="M100.75 103.714l72.482-.143c.043 39.398-32.284 71.434-72.16 71.434-39.878 0-72.204-32.036-72.204-71.554"
+              fill="none"
+              stroke="#fff"
+            />
+            <path
+              d="M72 125.143h28.75"
+              fill="#009100"
+              fill-rule="evenodd"
+              stroke="#fff"
+            />
+            <path
+              d="M100.75 103.714l-71.908-.143c.026-39.638 32.352-71.674 72.23-71.674 39.876 0 72.203 32.036 72.203 71.554"
+              fill="none"
+              stroke="#fff"
+            />
+            <path
+              d="M100.75 82.286h28.75"
+              fill="#009100"
+              fill-rule="evenodd"
+              stroke="#fff"
+            />
+            <path
+              d="M100.75 125.143h28.75"
+              fill="#009100"
+              fill-rule="evenodd"
+              stroke="#fff"
+            />
+          </g>
         </svg>
       </button>
     </div>
@@ -43,6 +77,16 @@
         <button>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>filter-menu</title><path d="M11 11L16.76 3.62A1 1 0 0 0 16.59 2.22A1 1 0 0 0 16 2H2A1 1 0 0 0 1.38 2.22A1 1 0 0 0 1.21 3.62L7 11V16.87A1 1 0 0 0 7.29 17.7L9.29 19.7A1 1 0 0 0 10.7 19.7A1 1 0 0 0 11 18.87V11M13 16L18 21L23 16Z" /></svg>
         </button>
+      </div>
+      <div class="filter-form">
+        <div class="filter-element">
+          <label for="text">Nombre</label>
+          <input type="text"> 
+        </div>
+        <div class="filter-element">
+          <label for="email">Email</label>
+          <input type="email">
+        </div>
       </div>
     </section>
     <div class="crud">

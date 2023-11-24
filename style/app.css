@@ -1,153 +1,264 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-button{
+button {
     background: transparent;
     border: none;
     cursor: pointer;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: hsl(0, 0%, 100%);
     font-family: 'Roboto', sans-serif;
 }
 
-input, label, select, textarea, li, span, p {
+input,
+label,
+select,
+textarea,
+li,
+span,
+p {
     color: hsl(0, 0%, 100%);
     font-family: 'Roboto', sans-serif;
 }
 
-body{
+body {
     background-color: hsl(226, 63%, 45%);
     margin: 0 auto;
     width: 90%;
 }
-.menu{
-    top: 0;    
+
+.menu {
+    top: -100vh;
     left: 0;
-    cursor: pointer;
-    z-index: 1;
-    background-color: transparent;
+    z-index: 1000;
+    background-color: aquamarine;
     height: 100vh;
     width: 100%;
     position: fixed;
-    transition: top 0.3s;
-}
-.menu.active{
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background-color: yellow;
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    transition: top 0.3s;
+    transition: top 0.5s;
 }
 
-header{
+.menu.active {
+    top: 0;
+}
+
+header {
     align-items: center;
     display: flex;
     justify-content: space-between;
     padding: 1.5rem 0;
 }
 
-.top-bar-hamburguer button svg{
-    width: 3rem;
+.container{
+   z-index: 1002;
 }
 
-.top-bar-hamburguer button svg path{
-    fill:hsl(0, 0%, 100%);
+.container-button {
+    cursor: pointer;
+    display: flex;
+    z-index: 1002;
+    position: relative;
+
 }
 
-.filter{
+.container-button svg {
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 5rem;
+}
+
+.container-button.active svg {
+    transform: rotate(90deg);
+}
+
+.container-button path {
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dasharray 500ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container-button path:nth-child(1) {
+    transform-origin: 36% 40%;
+}
+
+.container-button path:nth-child(2) {
+    stroke-dasharray: 29 299;
+}
+
+.container-button path:nth-child(3) {
+    transform-origin: 35% 63%;
+}
+
+.container-button path:nth-child(4) {
+    stroke-dasharray: 29 299;
+}
+
+.container-button path:nth-child(5) {
+    transform-origin: 61% 52%;
+}
+
+.container-button path:nth-child(6) {
+    transform-origin: 62% 52%;
+}
+
+.container-button.active path:nth-child(1) {
+    transform: translateX(9px) translateY(1px) rotate(45deg);
+}
+
+.container-button.active path:nth-child(2) {
+    stroke-dasharray: 225 299;
+    stroke-dashoffset: -72px;
+}
+
+.container-button.active path:nth-child(3) {
+    transform: translateX(9px) translateY(1px) rotate(-45deg);
+}
+
+.container-button.active path:nth-child(4) {
+    stroke-dasharray: 225 299;
+    stroke-dashoffset: -72px;
+}
+
+.container-button.active path:nth-child(5) {
+    transform: translateX(9px) translateY(1px) rotate(-45deg);
+}
+
+.container-button.active path:nth-child(6) {
+    transform: translateX(9px) translateY(1px) rotate(45deg);
+}
+
+
+.filter {
     align-items: center;
     background-color: hsl(0, 0%, 100%);
     display: flex;
-    justify-content: center;
     margin-bottom: 2rem;
-    padding: 0.2rem 0;
+    padding: 0.4rem 0;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 2rem;
+    max-height: 0rem;
+    transition: 0.3s;
 }
 
-.filter-button button svg{
+.filter.active{
+    max-height: 6rem;
+}
+.filter-form{
+    display:flex;
+    justify-content: space-between;
+    gap: 3rem;
+    width: 80%;
+    
+}
+
+.filter-element{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 0.3rem;
+    padding-bottom: 1rem;
+}
+
+.filter-element label{
+    
+    color: black;
+}
+
+.filter.active{
+    height: 50vh;
+
+}
+
+.filter-button button svg {
     width: 2rem;
 }
 
-.filter-button button svg path{
+.filter-button button svg path {
     fill: hsl(207, 85%, 69%);
 }
 
-.filter-button button:hover svg path{
+.filter-button button:hover svg path {
     fill: hsl(34, 79%, 53%);
 }
 
 
-.crud{
+.crud {
     display: flex;
     gap: 5%;
     justify-content: space-between;
 }
 
-.table{
+.table {
     display: flex;
     flex: 1;
     flex-direction: column;
     gap: 1rem;
 }
 
-.table-buttons{
+.table-buttons {
     background-color: hsl(207, 85%, 69%);
     display: flex;
     justify-content: flex-end;
     gap: 0.5rem;
 }
 
-.edit-button button svg, .delete-button button svg{
+.edit-button button svg,
+.delete-button button svg {
     width: 2rem;
 }
 
-.edit-button button svg path, .delete-button button svg path{
-    fill:hsl(0, 0%, 100%);
+.edit-button button svg path,
+.delete-button button svg path {
+    fill: hsl(0, 0%, 100%);
 }
 
-.edit-button button:hover svg path, .delete-button button:hover svg path{
+.edit-button button:hover svg path,
+.delete-button button:hover svg path {
     fill: hsl(34, 79%, 53%);
 }
 
-.table-data{
+.table-data {
     background-color: hsl(226, 64%, 66%);
     padding: 0.5rem;
 }
 
-.table-data ul{
+.table-data ul {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
-.table-data ul li span{
+.table-data ul li span {
     font-weight: 700;
 }
 
-.table-data ul li span::after{
+.table-data ul li span::after {
     content: ":";
     margin-right: 0.5rem;
 }
 
-.form{
+.form {
     flex: 2;
 }
 
-.form-buttons{
+.form-buttons {
     background-color: hsl(0, 0%, 100%);
     display: flex;
     justify-content: flex-end;
@@ -156,25 +267,28 @@ header{
     padding-right: 0.5rem;
 }
 
-.form-clean-button button svg, .form-save-button button svg{
+.form-clean-button button svg,
+.form-save-button button svg {
     width: 2rem;
 }
 
-.form-clean-button button svg path, .form-save-button button svg path{
+.form-clean-button button svg path,
+.form-save-button button svg path {
     fill: hsl(207, 85%, 69%);
 }
 
-.form-clean-button button:hover svg path, .form-save-button button:hover svg path{
+.form-clean-button button:hover svg path,
+.form-save-button button:hover svg path {
     fill: hsl(34, 79%, 53%);
 }
 
-form{
+form {
     display: flex;
     flex-wrap: wrap;
     gap: 2%;
 }
 
-.form-element{
+.form-element {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -182,7 +296,7 @@ form{
     width: 49%;
 }
 
-.form-element-input *{
+.form-element-input * {
     background-color: hsl(226, 64%, 66%);
     border: none;
     box-sizing: border-box;
