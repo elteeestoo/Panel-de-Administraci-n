@@ -179,8 +179,6 @@ header {
 
 .content-select-accept{
     display: flex;
-    width: 30%;
-    padding: 2rem;
     justify-content: center;
     background-color: blue;
     width: 50%;
