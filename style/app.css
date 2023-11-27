@@ -52,7 +52,7 @@ body {
     height: 100vh;
     width: 100%;
     position: fixed;
-    transition: top 0.5s;
+    transition: top 0.7s;
 }
 
 .menu.active {
@@ -148,24 +148,33 @@ header {
     align-items: center;
     background-color: hsl(0, 0%, 100%);
     display: flex;
-    margin-bottom: 2rem;
-    padding: 0.4rem 0;
-    flex-direction: column;
+    margin-bottom: 1rem;
+    justify-content: space-between;
     overflow: hidden;
     min-height: 2rem;
     max-height: 0rem;
+    padding: 0.1rem 0.5rem;
     transition: 0.3s;
 }
 
 .filter.active{
     max-height: 6rem;
+    
 }
+
+.filter-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+
 .filter-form{
     display:flex;
     justify-content: space-between;
     gap: 3rem;
-    width: 80%;
-    
 }
 
 .filter-element{
