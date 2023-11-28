@@ -145,6 +145,84 @@ header {
 
 .filter-modal{
     display: flex;
+    background-color: hsla(0, 0%, 0%, 0.555);
+    align-items: center;
+    justify-content: center;
+    z-index: 3000;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: -100%;
+    left: 0%
+    
+
+}
+
+.filter-modal.active{
+    top: 0;
+}
+
+.filter-modal-content{
+    display: flex;
+    z-index: 3000;
+    position: absolute;
+    background-color: hsl(271, 76%, 53%);
+    width: 30%;
+    height: 30%;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8%;
+    border-color: hsl(0, 0%, 100%);
+    border-style: solid;
+    
+}
+.content-text{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 0.5rem;
+}
+
+.content-text input{
+    border: none;
+    padding: 0.3rem;
+}
+
+.content-title{
+    text-transform: uppercase;
+}
+
+.content-buttons{
+
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    
+
+}
+
+.content-buttons-accept{
+    background-color: hsl(240, 100%, 50%);
+    width: 40%;
+    border-radius: 30%;
+    padding: 0.5rem;
+    border-color: hsl(0, 0%, 100%);
+    border-style: solid;
+}
+
+.content-buttons-deny{
+    background-color: hsl(0, 100%, 50%);
+    width: 40%;
+    border-radius: 30%;
+    padding: 0.5rem;
+    border-color: hsl(0, 0%, 100%);
+    border-style: solid;
+}
+
+.delete-modal{
+    display: flex;
     background-color: rgba(0, 0, 0, 0.555);
     align-items: center;
     justify-content: center;
@@ -152,48 +230,43 @@ header {
     position: absolute;
     width: 100%;
     height: 100vh;
-    top: 0%;
+    top: -100%;
     left: 0%
+    
 
 }
 
-.filter-modal-content{
+.delete-modal.active{
+    top: 0;
+}
+
+.delete-modal-content{
     display: flex;
     z-index: 3000;
     position: absolute;
-    background-color: red;
+    background-color: blueviolet;
     width: 30%;
     height: 30%;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     align-items: center;
     justify-content: center;
     border-radius: 8%;
     border-color: white;
     border-style: solid;
-}
-
-.content-title{
     
 }
 
-.content-select-accept{
-    display: flex;
-    justify-content: center;
-    background-color: blue;
-    width: 50%;
-    gap: 2rem;
-}
 .filter {
     align-items: center;
     background-color: hsl(0, 0%, 100%);
     display: flex;
     margin-bottom: 1rem;
-    justify-content: space-between;
+    justify-content: center;
     overflow: hidden;
     min-height: 2rem;
     max-height: 0rem;
-    padding: 0.1rem 0.5rem;
+    padding: 0.2rem 0.5rem;
     transition: 0.3s;
 }
 
@@ -307,13 +380,46 @@ header {
     flex: 2;
 }
 
+.form-top-bar{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+    margin-bottom: 2rem;
+
+}
+
+.form-selection{
+    display: flex;
+    width: 100%;
+   
+}
+
 .form-buttons {
     background-color: hsl(0, 0%, 100%);
     display: flex;
     justify-content: flex-end;
     gap: 0.5rem;
-    margin-bottom: 1rem;
+
     padding-right: 0.5rem;
+}
+
+.form-data {
+    display: flex;
+    background-color: blue;
+    align-items: center;
+    padding: 0.7rem;
+
+}
+
+.form-images{
+    display: flex;
+    align-items: center;
+    padding: 0.7rem;
+}
+
+.form-images h3{
+    color: blue;
 }
 
 .form-clean-button button svg,
