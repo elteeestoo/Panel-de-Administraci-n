@@ -412,6 +412,17 @@ header {
 
 }
 
+.form-data.active{
+
+    background-color: white;
+    
+}
+
+.form-data.active h3{
+
+    color: blue;
+}
+
 .form-images{
     display: flex;
     align-items: center;
@@ -420,6 +431,15 @@ header {
 
 .form-images h3{
     color: blue;
+}
+
+.form-images.active{
+    background-color: blue;
+}
+
+.form-images.active h3{
+    color: white;
+
 }
 
 .form-clean-button button svg,

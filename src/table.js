@@ -13,8 +13,12 @@ export default (() => {
 
         if (event.target.closest('.delete-button')) {
             removemodal.classList.add("active"); 
-            modalaccept.classList.remove("active")   
-            modaldeny.classList.remove("active")
         }
+        modalaccept?.addEventListener("click", () => {
+            removemodal.classList.remove("active");
+          }); 
+        modaldeny?.addEventListener("click", () => {
+            removemodal.classList.remove("active");
+          }); 
     });
 })();
