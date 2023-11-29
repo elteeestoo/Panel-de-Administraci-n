@@ -404,9 +404,13 @@ header {
     padding-right: 0.5rem;
 }
 
+.form-data h3{
+    color: blue;
+}
+
 .form-data {
     display: flex;
-    background-color: blue;
+    background-color: white;
     align-items: center;
     padding: 0.7rem;
 
@@ -414,13 +418,14 @@ header {
 
 .form-data.active{
 
-    background-color: white;
+    background-color: blue;
+    
     
 }
 
 .form-data.active h3{
 
-    color: blue;
+    color: white;
 }
 
 .form-images{

@@ -6,13 +6,13 @@ export default (() => {
     const imagesbutton = document.querySelector(".form-images button");
   
     databutton?.addEventListener("click", () => {
-        images.classList.add("active")
         data.classList.add("active");
-        databutton.classList.remove("active");
+        images.classList.remove("active");
+
     });
     imagesbutton?.addEventListener("click", () => {
-        data.classList.add("active")
-        images.classList.toggle("active");
+        images.classList.add("active");
+        data.classList.remove("active");
         imagesbutton.classList.toggle("active");
       });
   

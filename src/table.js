@@ -1,8 +1,5 @@
 export default (() => {
-    const remove = document.querySelector(".delete-button");
-    const removemodal = document.querySelector(".delete-modal")
-    const modalaccept = document.querySelector(".delete-modal .content-buttons-accept");
-    const modaldeny = document.querySelector(".delete-modal .content-buttons-deny");
+
     const tableSection = document.querySelector('.table');
 
     tableSection?.addEventListener('click', async (event) => {
@@ -12,13 +9,11 @@ export default (() => {
         }
 
         if (event.target.closest('.delete-button')) {
-            removemodal.classList.add("active"); 
+            document.dispatchEvent(new CustomEvent ('showModalDestroy'))
         }
-        modalaccept?.addEventListener("click", () => {
-            removemodal.classList.remove("active");
-          }); 
-        modaldeny?.addEventListener("click", () => {
-            removemodal.classList.remove("active");
-          }); 
+        if (event.target.closest('.filter')){
+            document.dispatchEvent(new CustomEvent ('showModalfilter'))
+        }
+        
     });
 })();
