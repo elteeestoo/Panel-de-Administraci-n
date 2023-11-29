@@ -389,10 +389,25 @@ header {
 
 }
 
-.form-selection{
+.tabs{
     display: flex;
     width: 100%;
-   
+}
+
+.tab{
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+.tab{
+    color: blue;
+    padding: 0.7rem;
+}
+
+.tab.active{
+    background-color: blue;
+    color: white;
 }
 
 .form-buttons {
@@ -404,48 +419,6 @@ header {
     padding-right: 0.5rem;
 }
 
-.form-data h3{
-    color: blue;
-}
-
-.form-data {
-    display: flex;
-    background-color: white;
-    align-items: center;
-    padding: 0.7rem;
-
-}
-
-.form-data.active{
-
-    background-color: blue;
-    
-    
-}
-
-.form-data.active h3{
-
-    color: white;
-}
-
-.form-images{
-    display: flex;
-    align-items: center;
-    padding: 0.7rem;
-}
-
-.form-images h3{
-    color: blue;
-}
-
-.form-images.active{
-    background-color: blue;
-}
-
-.form-images.active h3{
-    color: white;
-
-}
 
 .form-clean-button button svg,
 .form-save-button button svg {
