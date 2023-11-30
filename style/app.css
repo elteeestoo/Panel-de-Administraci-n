@@ -398,11 +398,15 @@ header {
     background-color: white;
     display: flex;
     align-items: center;
+    padding: 0.5rem;
 }
 
-.tab{
+.tab button{
     color: blue;
-    padding: 0.7rem;
+}
+
+.tab.active button{
+    color: white;
 }
 
 .tab.active{
@@ -435,6 +439,19 @@ header {
     fill: hsl(34, 79%, 53%);
 }
 
+.tab-content.active{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    
+}
+
+.tab-content{
+    display: none;
+   
+}
+
 form {
     display: flex;
     flex-wrap: wrap;
@@ -457,4 +474,15 @@ form {
     outline: transparent;
     padding: 0.5rem;
     width: 100%;
+}
+
+.form-element-input .file{
+    padding: 2rem;
+
+}
+
+.validate{
+    border-bottom: solid;
+    border-color: hsl(0, 67%, 42%);
+
 }
