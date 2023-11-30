@@ -481,8 +481,8 @@ form {
 
 }
 
-.validate{
+.input-active{
     border-bottom: solid;
     border-color: hsl(0, 67%, 42%);
-
+    
 }
