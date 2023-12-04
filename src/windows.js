@@ -1,21 +1,26 @@
 export default (() => {
 
-    const data = document.querySelector(".form-data");
-    const databutton = document.querySelector(".form-data button");
-    const images = document.querySelector(".form-images");
-    const imagesbutton = document.querySelector(".form-images button");
-  
-    
-    databutton?.addEventListener("click", () => {
-        data.classList.add("active");
-        images.classList.remove("active");
+  const main = document.querySelector('main');
 
-    });
-    imagesbutton?.addEventListener("click", () => {
-        images.classList.add("active");
-        data.classList.remove("active");
-        imagesbutton.classList.toggle("active");
-      });
+  main?.addEventListener('click', (event) => {
+
+    event.preventDefault();
+
+    if (event.target.closest('.tab')) {
+
+      if (event.target.closest('.tab').classList.contains('active')) {
+        return;
+      }
+      
+      const tabClicked = event.target.closest('.tab');
+      const tabActive = tabClicked.parentElement.querySelector('.active');
+      
+      tabClicked.classList.add('active');
+      tabActive.classList.remove('active');
+
+      tabClicked.closest('section').querySelector(`.tab-content.active[data-tab="${tabActive.dataset.tab}"]`).classList.remove('active');
+      tabClicked.closest('section').querySelector(`.tab-content[data-tab="${tabClicked.dataset.tab}"]`).classList.add('active');
+    }
+  });
   
-  })();
-    
+})();
