@@ -24,14 +24,18 @@ class Menu extends HTMLElement {
                 width: 100%;
                 position: fixed;
                 transition: top 0.7s;
+                
             }
 
             .menu.active {
                 top: 0;
             }
            
+               
+
             .container{
-            z-index: 1002;
+                z-index: 1002;
+                
             }
 
             .container-button {
@@ -39,12 +43,15 @@ class Menu extends HTMLElement {
                 display: flex;
                 z-index: 1002;
                 position: relative;
-
+                background-color: transparent;
+                border-style: none
+                
             }
 
             .container-button svg {
                 transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
                 width: 5rem;
+                
             }
 
             .container-button.active svg {
@@ -153,7 +160,16 @@ class Menu extends HTMLElement {
                 </svg>
             </button>
             </div>
-      `;
+
+      `
+        const menu = this.shadow.querySelector(".menu");
+        const menuButton = this.shadow.querySelector(".container-button");
+
+        menuButton?.addEventListener("click", () => {
+        menu.classList.toggle("active");
+        menuButton.classList.toggle("active");
+  });
+      ;
     }
   }
     
