@@ -31,8 +31,6 @@ class Menu extends HTMLElement {
                 top: 0;
             }
            
-               
-
             .container{
                 z-index: 1002;
                 
@@ -159,18 +157,22 @@ class Menu extends HTMLElement {
                 </g>
                 </svg>
             </button>
-            </div>
-
+        </div>
       `
-        const menu = this.shadow.querySelector(".menu");
         const menuButton = this.shadow.querySelector(".container-button");
 
         menuButton?.addEventListener("click", () => {
+            this.openMenu();
+        });
+    }
+
+    openMenu(){
+        const menu = this.shadow.querySelector(".menu");
+        const menuButton = this.shadow.querySelector(".container-button");
+
         menu.classList.toggle("active");
         menuButton.classList.toggle("active");
-  });
-      ;
     }
-  }
-    
-  customElements.define('menu-component', Menu);
+}
+
+customElements.define('menu-component', Menu);

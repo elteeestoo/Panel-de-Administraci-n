@@ -143,7 +143,7 @@ header {
     transform: translateX(9px) translateY(1px) rotate(45deg);
 }
 
-.filter-modal{
+/* .filter-modal{
     display: flex;
     background-color: hsla(0, 0%, 0%, 0.555);
     align-items: center;
@@ -219,7 +219,7 @@ header {
     padding: 0.5rem;
     border-color: hsl(0, 0%, 100%);
     border-style: solid;
-}
+} */
 
 .delete-modal{
     display: flex;
