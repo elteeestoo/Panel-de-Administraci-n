@@ -386,6 +386,7 @@ header {
     background-color: white;
     width: 100%;
     margin-bottom: 2rem;
+    
 
 }
 
@@ -395,10 +396,9 @@ header {
 }
 
 .tab{
-    background-color: white;
     display: flex;
     align-items: center;
-    padding: 0.5rem;
+    padding: 1rem;
 }
 
 .tab button{
@@ -419,7 +419,7 @@ header {
     display: flex;
     justify-content: flex-end;
     gap: 0.5rem;
-
+    align-items: center;
     padding-right: 0.5rem;
 }
 
