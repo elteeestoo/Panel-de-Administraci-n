@@ -221,7 +221,7 @@ header {
     border-style: solid;
 } */
 
-.delete-modal{
+/* .delete-modal{
     display: flex;
     background-color: rgba(0, 0, 0, 0.555);
     align-items: center;
@@ -255,7 +255,7 @@ header {
     border-color: white;
     border-style: solid;
     
-}
+} */
 
 .filter {
     align-items: center;

@@ -9,7 +9,7 @@ export default (() => {
         }
 
         if (event.target.closest('.delete-button')) {
-            document.dispatchEvent(new CustomEvent ('showModalDestroy'))
+            document.dispatchEvent(new CustomEvent ('showModalDelete'))
         }
         if (event.target.closest('.filter-button')){
             document.dispatchEvent(new CustomEvent ('showModalFilter'))

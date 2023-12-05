@@ -136,7 +136,6 @@ class Filter extends HTMLElement {
 
     openModal(){
         const filtermodal = this.shadow.querySelector(".filter-modal")
-        console.log(filtermodal)
         filtermodal.classList.add("active");
     }
 
